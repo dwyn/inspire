@@ -17,31 +17,27 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <title>Inspire</title>
+    <title><%= @title %></title>
   </head>
 
   <body>
 
-    <div class="container-fluid"> <%# Start navbar %>
-      <header>
-        <nav class="navbar sticky-top">
-          <a class="nav-item nav-link home" href="/">Inspire</a>
-          <a class="nav-item nav-link" href="<%= link_to projects_path %>">Projects</a>
-          <a class="nav-item nav-link" href="<%= link_to signup_path %>">Sign Up</a>
-          <a class="nav-item nav-link" href="/logout">Logout</a>
-        </nav>
-      </header>
-    </div> <%# End navbar %>
+    <header class="container-fluid"> <%# Start navbar %>
+      <nav class="navbar sticky-top">
+        <a class="nav-item nav-link home" href="/">Inspire</a>
+        <a class="nav-item nav-link" href="<%= link_to projects_path %>">Projects</a>
+        <a class="nav-item nav-link" href="<%= link_to signup_path %>">Sign Up</a>
+        <a class="nav-item nav-link" href="/logout">Logout</a>
+      </nav>
+    </header> <%# End navbar %>
 
     <div class="container-fluid"> <%# Start body %>
       <%= yield %>
     </div> <%# End body %>
 
-    <div class="container-fluid"> <%# Start footer %>
-      <footer>
-        <small>&copy; 2019 <strong>Inspire</strong></small>
-      </footer>
-    </div> <%# End footer %>
+    <footer class="container-fluid">
+      <small>&copy; 2019 <strong>Inspire</strong></small>
+    </footer> <%# Start footer %>
 
     <%# Optional JavaScript %>
     <%# jQuery first, then Popper.js, then Bootstrap JS %>
