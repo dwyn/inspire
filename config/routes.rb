@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'welcome#home'
+
   resources :projects
   resources :sections
   resources :users
