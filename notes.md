@@ -52,6 +52,7 @@ Building controllers for:
 Users
 Projects
 Sections
+Sessions controller
 
 
 Meg, Guy, Terry, Yonnick
