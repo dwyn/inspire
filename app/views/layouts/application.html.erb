@@ -1,15 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Inspire</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# Required meta tags %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%# Bootstrap CSS %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%# Font Awesome CSS %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <title>Inspire</title>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container-fluid"> <%# Start navbar %>
+      <header>
+        <nav class="navbar sticky-top">
+          <a class="nav-item nav-link home" href="/">Inspire</a>
+          <a class="nav-item nav-link" href="<%= link_to projects_path %>">Projects</a>
+          <a class="nav-item nav-link" href="<%= link_to signup_path %>">Sign Up</a>
+          <a class="nav-item nav-link" href="/logout">Logout</a>
+        </nav>
+      </header>
+    </div> <%# End navbar %>
+
+    <div class="container-fluid"> <%# Start body %>
+      <%= yield %>
+    </div> <%# End body %>
+
+    <div class="container-fluid"> <%# Start footer %>
+      <footer>
+        <small>&copy; 2019 <strong>Inspire</strong></small>
+      </footer>
+    </div> <%# End footer %>
+
+    <%# Optional JavaScript %>
+    <%# jQuery first, then Popper.js, then Bootstrap JS %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
