@@ -1,8 +1,5 @@
 Inspire
-
-Lead Engineers
-Jennifer Pazos
-Reggie Carter II
+https://www.gloomaps.com/
 
 What are our models?
 User
@@ -37,12 +34,45 @@ Feature Creep:
 
 
 Possibilities:
-Technologies
-Social component (tweet out what project they will attempt)
+1. Technologies --> Technologies related to app in question? (eg Sinatra, Rails, CLI etc)
+2. Social component (tweet out what project they will attempt)
+3. ActiveAdmin
 
 What info should appear on the landing page?
 Navbar: sign in / out, login with OAuth, Sections, all projects
 Hot projects / recent projects (def fire icons)
+
+Landing page should have:
+1. Navbar (OAuth Github, Login, Signup, Signout, User profile)
+2. Examples of projects that have been built!
+3. Hot projects / recent projects (how many people have liked a favorited project)
+
+Aziz, Reggie, John
+Building controllers for:
+Users
+Projects
+Sections
+
+
+Meg, Guy, Terry, Yonnick
+View for 
+1. Landingpage
+
+2. Users profile page 
+ - Show user created projects
+ - Create
+
+3. Sections 
+ - Index (with a scope method to filter projects by section)
+
+4. Projects
+  - Index
+  - Show
+  - New
+
+
+
+
 
 What happens after a user signs in?
 Navbar addition: Favorited / bookmarked projects
