@@ -21,14 +21,20 @@ body {
   font-size: 1.6rem;
 }
 
-// Headings //
+// Navbar //
 
-h1 {
-  font-size: 5rem;
+nav.navbar {
+  padding: 8px 31px;
+  margin: 0 -15px;
+  background-color: $dark-shade;
 }
 
-h2 {
-  font-size: 3rem;
+nav.navbar > a {
+  color: $main-color;
+}
+
+nav.navbar > a:hover {
+  color: $light-shade;
 }
 
 // Links //
