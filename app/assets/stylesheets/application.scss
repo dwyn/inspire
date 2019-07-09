@@ -31,8 +31,16 @@ h2 {
   font-size: 3rem;
 }
 
+// Links //
 
+a {
+  color: $dark-accent;
+}
 
+a:hover {
+  color: $dark-shade;
+  text-decoration: none;
+}
 
 // Footer //
 
