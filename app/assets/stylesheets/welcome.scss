@@ -1,3 +1,16 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Typography //
+
+.jumbotron > * > h1 {
+  font-size: 5rem;
+  color: $dark-accent;
+  text-shadow: -1px 1px 1rem $light-shade, 1px -1px 1rem $light-shade, 1px 1px 1rem $light-shade, -1px -1px 1rem $light-shade;
+}
+
+.jumbotron > * > h2 {
+  font-size: 2.5rem;
+  color: $light-shade;
+}
