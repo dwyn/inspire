@@ -20,11 +20,14 @@
 </section>
 
 <%# Projects Index %>
-<section class="row justify-content-center">
+<section class="row justify-content-center project-index">
   <% @projects.each do |project| %>
-    <div class="col-3 project-index">
-      <h2><%= link_to project.title, project_path(project) %></h2>
-      <p>Created by: <%= project.user.name %></p>
+    <div class="col-3">
+      <div class="card text-center">
+        <h1 class="card-title"><%= project.title %></h1>
+        <p class="card-text">Created by: <%= link_to project.user.name, user_path(project.user) %></p>
+        <a class="btn" href="#" role="button">View Project</a>
+      </div>
     </div>
   <% end %>
 </section>

@@ -2,10 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Welcome Page Styling //
+// Welcome Page Project Styling //
 
-// Project Headings //
-
-.project-index > h1 {
-  font-size: 3rem;
+.project-index > * > .card {
+  background-color: $light-shade;
+  border-color: $light-accent;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
 }
+
+.project-index > * > .card > a.btn {
+  background-color: $main-color;
+  color: $dark-shade;
+  font-weight: bold;
+  display: inline;
+}
+
+h1.card-title {
+  font-size: 3rem;
+  color: $dark-shade;
+}
+
+
+
