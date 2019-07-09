@@ -22,7 +22,7 @@
 <%# Projects Index %>
 <section class="row justify-content-center">
   <% @projects.each do |project| %>
-    <div class="col-3">
+    <div class="col-3 project-index">
       <h2><%= link_to project.title, project_path(project) %></h2>
       <p>Created by: <%= project.user.name %></p>
     </div>
