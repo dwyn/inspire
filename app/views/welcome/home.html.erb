@@ -24,7 +24,7 @@
   <% @projects.each do |project| %>
     <div class="col-3">
       <h2><%= link_to project.title, project_path(project) %></h2>
-      <p>Created by: <%= project.user_id.name %></p>
+      <p>Created by: <%= project.user.name %></p>
     </div>
   <% end %>
 </section>
