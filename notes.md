@@ -71,6 +71,10 @@ View for
   - Show
   - New
 
+Next Sprint
+Create Trello (or Airtable)
+Finish Views
+Finish Controllers
 
 
 
