@@ -11,4 +11,24 @@ class ProjectsController < ApplicationController
   #     redirect_to project_path(@project), notice: "Project has been added to your favorites."
   #   end
   # end
+
+  def new
+
+  end
+
+  def create
+
+  end
+
+  def show
+
+  end
+
+  def edit
+      
+  end
+
+  def method_name
+
+  end
 end
