@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#home'
 
-  resources :projects
+  resources :projects do
+    member { post :favorite }
+  end
   resources :sections
   resources :users
 
