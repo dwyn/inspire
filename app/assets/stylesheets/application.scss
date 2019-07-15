@@ -9,7 +9,49 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
  */
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import 'styling_variables', 'projects', 'sections', 'users', 'welcome';
+
+// Body //
+
+body {
+  font-size: 1.6rem;
+}
+
+// Navbar //
+
+nav.navbar {
+  padding: 8px 31px;
+  margin: 0 -15px;
+  background-color: $dark-shade;
+}
+
+nav.navbar > a {
+  color: $main-color;
+}
+
+nav.navbar > a:hover {
+  color: $light-shade;
+}
+
+// Links //
+
+a {
+  color: $dark-accent;
+}
+
+a:hover {
+  color: $dark-shade;
+  text-decoration: none;
+}
+
+// Footer //
+
+footer {
+  background-color: $main-color;
+  color: $light-shade;
+  padding-bottom: 7px;
+}
