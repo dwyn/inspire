@@ -15,31 +15,11 @@ class User < ApplicationRecord
   def favorited?(project)
     self.favorites.find_by(id: project.id).present?
   end
+
+  def self.has_favorites
+    where(favorites: > 0 )
+  end
+
 end
-
-find
-create_with
-distinct
-eager_load
-extending
-from
-group
-having
-includes
-joins
-left_outer_joins
-limit
-lock
-none
-offset
-order
-preload
-readonly
-references
-reorder
-reverse_order
-select
-where
-
 
 # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false } 

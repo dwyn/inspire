@@ -6,3 +6,4 @@ class Project < ApplicationRecord
   has_many :favorited_by, through: :favorite_projects, source: :user 
 
 end
+
