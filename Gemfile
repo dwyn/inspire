@@ -33,6 +33,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'sprockets-rails', '>= 2.3.2'
 # Use jQuery to support bootstrap
 gem 'jquery-rails'
+gem 'pry'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

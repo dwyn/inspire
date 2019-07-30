@@ -6,18 +6,22 @@ class User < ApplicationRecord
 
   def favorited!(project)
     self.favorites << project
+    if project.fav_count == nil
+      project.fav_count = 1
+    else
+      project.fav_count += 1
+    end
+    project.save
   end
 
   def unfavorited!(project)
     self.favorites.delete(project)
+    project.fav_count -= 1
+    project.save
   end
 
   def favorited?(project)
     self.favorites.find_by(id: project.id).present?
-  end
-
-  def self.has_favorites
-    where(favorites: > 0 )
   end
 
 end
