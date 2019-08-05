@@ -18,7 +18,7 @@
 
     <header class="container-fluid"> <%# Start navbar %>
       <nav class="navbar navbar-expand-lg sticky-top">
-        <a class="navbar-brand" href="/">Inspire</a>
+        <a class="navbar-brand" href="/" style=>Inspire</a>
         <a class="nav-item nav-link" href="/projects">Projects</a>
 
         <% if !logged_in? %>
@@ -35,8 +35,8 @@
       <%= yield %>
     </div> <%# End body %>
 
-    <footer class="container-fluid"> <%# Start footer %>
-      <small>&copy; 2019 <strong>Inspire</strong></small>
+    <footer class="navbar container-fluid fixed-bottom"> <%# Start footer %>
+      <span style"font-size: 14px;">&copy; 2019 Inspire</span>
     </footer> <%# End footer %>
 
   </body>

@@ -18,3 +18,4 @@ end
 25.times do
   Project.create!(title: Faker::Superhero.name, user_id: 1)
 end
+

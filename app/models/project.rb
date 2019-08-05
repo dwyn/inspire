@@ -7,10 +7,17 @@ class Project < ApplicationRecord
 
 
   # scope :most_favorited, -> {joins(:favorite_projects).group(:project_id)}
+  # Project.joins(:favorite_projects).where(:project_id == :id).group(:project_id, :id).count <- RIP
+
+scope :hottest, -> {joins(:favorite_projects).group(:project_id, :id).order("count(project_id) DESC").first}#! <-- This one!
+# scope :hottest, -> {joins(:favorite_projects).group(:project_id, :id).order("count(project_id) DESC").all}#! <-- This one!
+
 
   # dont delf yourself
   def self.hottest
-    # binding.pry
-    find_by(id: select(:id).where(fav_count: maximum(:fav_count)))
+    joins(:favorite_projects).select(:project_id).group(:project_id).count.sort do |k, v|
+      v[1] <=> k[1]
+      #Write code to select 
+    end#.flatten
   end
 end
